@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js" integrity="sha384-/TgkGk7p307TH7EXJDuUlgG3Ce1UVolAOFopFekQkkXihi5u/6OCvVKyz1W+idaz" crossorigin="anonymous"></script>
+    <title>{{pag_name}}</title>
+</head>
+
+<body>
+    
+</body>
+</html>
+<body>
+    
+
+    <header>
+        <h1>{{pag_nome}}</h1>
+        {% include "menu.html"%}
+    </header>
+
+    <main>
+
+    <form action="/adicionar_musica" method="post">
+        <label>Musica:</label>
+        <input type="text" name="musica">
+        <label>Artista:</label>
+        <input type="text" name="artista">
+        <label>Tablatura:</label>
+        <input type="text" name="tablatura">
+        <label>Letra:</label>
+        <input type="text" name="letra">
+        <input type="submit" name="btAdicionar" value="Adicionar">
+    </form>
+
+    <section>
+    
+            <h3>Música</h3>
+            {% for id, musica, artista, tablatura, letra in info %}
+            </table>
+
+            <ul>
+                <li>{{musica}}</li>
+            </ul>       
+            {% endfor %}
+
+</main>
+
+</body>
+
+</html> 
+
+
